@@ -14,13 +14,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Modal opened={opened} onClose={close} title="Authentication">
+        <Modal
+          opened={opened}
+          onClose={close}
+          title="Authentication"
+          fullScreen
+        >
           {/* Modal content */}
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
             <Select
               key={i}
               label="Your favorite framework/library"
               size="xl"
+              searchable
               data={[
                 { value: "react", label: "React" },
                 { value: "ng", label: "Angular" },
